@@ -30,15 +30,37 @@
         </aside>
 
         <section class="contenido">
-            <h2 id="titulo">Audios</h2>
+            <h2 id="titulo">Formulario</h2>
             <article>
                 <header>
-                    <h3>Música Celta</h3>
+                    <h3>Registro de Cliente</h3>
                 </header>
-                <audio controls>
-                    <source src="audios/musica.mp3" type="audio/mpeg">
-                    Your browser does not support the <code>audio</code> tag.
-                </audio>
+                <form action="/cliente/registro" method="post">
+                    <fieldset title="Generales">
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" value="" size="40" />
+                    </fieldset>
+                    <fieldset>
+                        <label>Clave</label>
+                        <input type="password" name="clave" value="" size="10" />
+                    </fieldset>
+                    <fieldset>
+                        <label>Dirección</label>
+                        <textarea name="direccion" rows="6" cols="45">
+                        </textarea>
+                    </fieldset>
+                    <fieldset>
+                        <label>Edad</label>
+                        <input type="number" name="edad" value="" min="18" max="58" />
+                    </fieldset>
+                    <fieldset>
+                        <label>Correo</label>
+                        <input type="email" name="correo" value="" />
+                    </fieldset>
+                    
+                    <input type="submit" value="Enviar" />
+                    
+                </form>
             </article>
         </section>
         <footer class="pie">Desarrollos Tecnológicos Coronado 2023 &COPY;</footer>
